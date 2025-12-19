@@ -3,7 +3,7 @@
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
-// Nível: Novato
+// Nível: Aventureiro
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
@@ -14,6 +14,8 @@ int main() {
   float area1, area2;                           // Área
   float pib1, pib2;                             // PIB - Produto interno bruto
   int touristSpotNumber1, touristSpotNumber2;   // Número de pontos turísticos
+  float populationDensity1, populationDensity2; // Densidade populacional
+  float pibPerCapita1, pibPerCapita2;           // PIB per Capita
 
   // Entrada de dados da Carta 1
   printf("Carta 1\n");
@@ -71,7 +73,14 @@ int main() {
 
   printf("\n");
 
-  // Área para exibição dos dados da cidade
+  // Cálculos da densidade populacional e PIB per Capita
+  populationDensity1 = population1 / area1;
+  populationDensity2 = population2 / area2;
+
+  pibPerCapita1 = pib1 * 1e9 / population1;
+  pibPerCapita2 = pib2 * 1e9 / population2;
+
+  // Exibição dos dados da cidade 1
   printf("Carta 1\n");
   printf("Estado: %s\n", state1);
   printf("Código: %s\n", id1);
@@ -80,6 +89,8 @@ int main() {
   printf("Área: %.2f km²\n", area1);
   printf("PIB: %.2f bilhões de reais\n", pib1);
   printf("Número de pontos turísticos: %i\n", touristSpotNumber1);
+  printf("Densidade populacional: %.2f hab./km²\n", populationDensity1);
+  printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
   printf("\n");
 
@@ -92,6 +103,8 @@ int main() {
   printf("Área: %.2f km²\n", area2);
   printf("PIB: %.2f bilhões de reais\n", pib2);
   printf("Número de pontos turísticos: %i\n", touristSpotNumber2);
+  printf("Densidade populacional: %.2f hab./km²\n", populationDensity2);
+  printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
   return 0;
 }
